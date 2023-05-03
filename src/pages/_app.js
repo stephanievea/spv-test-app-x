@@ -1,13 +1,7 @@
-// import '@/styles/globals.css'
-
-// export default function App({ Component, pageProps }) {
-//   return <Component {...pageProps} />
-// }
-
 import '@/styles/globals.css'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
-// import "../../fonts/DistantGalaxy.css";
+import "../../fonts/DistantGalaxy.css";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter()
@@ -18,7 +12,6 @@ export default function App({ Component, pageProps }) {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta charSet="utf-8" />
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
       <link rel="icon" href="/favicon.svg" />
     </Head>
     <Component key={router.asPath} {...pageProps} />
