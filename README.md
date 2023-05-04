@@ -1,3 +1,23 @@
+Hello, 
+This is the test application as specified in the instructions. 
+Details will display on hover in Desktop
+and on click on mobile phones
+
+### Sample Desktop Images
+![desktop_home](https://drive.google.com/uc?export=view&id=1amddJNvAVXwSnI5hgclbEf-qeTm7It9Q) 
+![desktop_chars](https://drive.google.com/uc?export=view&id=1ODtH3pC7qcNZc13C9cuZUGp9sBVIuFnC) 
+
+### Sample Mobile Images
+![mobile_home](https://drive.google.com/uc?export=view&id=1qu3qKrvk9K2HqCVM1nMXLrZqPhRyyQ2U) 
+![mobile_chars](https://drive.google.com/uc?export=view&id=1j1s177QheF1MPHuIYCRHRLmfmwxsgbGC) 
+![mobile_char_detail](https://drive.google.com/uc?export=view&id=1ZRoKKvwgfoLUdnHjwtbnBbQZlbplQwRJ) 
+
+Regards, 
+Steph
+
+____________
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## SPV Getting Started
