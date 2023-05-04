@@ -1,6 +1,8 @@
 import styled from "styled-components"
 import Link from 'next/link'
 import { BiLeftArrow } from "react-icons/bi";
+import { HiCursorClick } from "react-icons/hi"
+import { MdTouchApp } from "react-icons/md"
 
 const Wrap = styled.div`
   margin: 2rem 0rem;
@@ -60,6 +62,7 @@ const CharacterContainer = styled.div`
   font-weight: 600;
   display: flex;
   flex-direction: column;
+	cursor: pointer;
 
   position: relative;
   &:hover ${Overlay} {
@@ -119,6 +122,32 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const HoverIcon = styled.div`
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	padding: 0.4rem 0.5rem;
+	border-radius: 1rem;
+	color: #FFF;
+	background: #000;
+	margin: .2rem 0rem 0rem .2rem;
+`
+
+const DesktopHoverIcon = styled(HoverIcon)`
+	display: block;
+
+	@media (max-width: 960px) {
+		display: none;
+	}
+`
+
+const MobileTouchIcon = styled(HoverIcon)`
+	display: none;
+
+	@media (max-width: 960px) {
+		display: block;
+	}
+`
 
 function CharactersPage({characters}) {
   return <>
@@ -128,28 +157,34 @@ function CharactersPage({characters}) {
         {characters.map((char, index) => 
         <CharacterBox key={index}>
             <CharacterContainer >
-            <CharacterImage
-                src={char.image}
-                alt={char.name}
-                width={180}
-                height={37}
-                priority
-            />
-            <NameBox>
-                {char.name}
-            </NameBox>
-            <Overlay>
-                <CharacterDetailContainer>
-                    {char.name}
-                    <CharacterDetailBox>height: {char.height}</CharacterDetailBox>
-                    <CharacterDetailBox>weight: {char.mass}</CharacterDetailBox>
-                    <CharacterDetailBox>hair color: {char.hair_color}</CharacterDetailBox>
-                    <CharacterDetailBox>skin tone: {char.skin_color}</CharacterDetailBox>
-                    <CharacterDetailBox>eye color: {char.eye_color}</CharacterDetailBox>
-                    <CharacterDetailBox>birth year: {char.birth_year}</CharacterDetailBox>
-                    <CharacterDetailBox>gender: {char.gender}</CharacterDetailBox>
-                </CharacterDetailContainer>
-            </Overlay>
+							<CharacterImage
+									src={char.image}
+									alt={char.name}
+									width={180}
+									height={37}
+									priority
+							/>
+							<DesktopHoverIcon>
+								<HiCursorClick size={15}/>
+							</DesktopHoverIcon>
+							<MobileTouchIcon>
+								<MdTouchApp/>
+							</MobileTouchIcon>
+							<NameBox>
+									{char.name}
+							</NameBox>
+							<Overlay>
+									<CharacterDetailContainer>
+											{char.name}
+											<CharacterDetailBox>height: {char.height}</CharacterDetailBox>
+											<CharacterDetailBox>weight: {char.mass}</CharacterDetailBox>
+											<CharacterDetailBox>hair color: {char.hair_color}</CharacterDetailBox>
+											<CharacterDetailBox>skin tone: {char.skin_color}</CharacterDetailBox>
+											<CharacterDetailBox>eye color: {char.eye_color}</CharacterDetailBox>
+											<CharacterDetailBox>birth year: {char.birth_year}</CharacterDetailBox>
+											<CharacterDetailBox>gender: {char.gender}</CharacterDetailBox>
+									</CharacterDetailContainer>
+							</Overlay>
             </CharacterContainer>
         </CharacterBox>)}
         </Container>
