@@ -64,6 +64,14 @@ const CharacterContainer = styled.div`
   flex-direction: column;
 	cursor: pointer;
 
+	-webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+	
   position: relative;
   &:hover ${Overlay} {
     height: 100%;
@@ -157,7 +165,7 @@ function CharactersPage({characters}) {
         <Container>
         {characters.map((char, index) => 
         <CharacterBox key={index}>
-            <CharacterContainer >
+            <CharacterContainer>
 							<CharacterImage
 									src={char.image}
 									alt={char.name}
