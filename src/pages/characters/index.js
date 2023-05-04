@@ -116,6 +116,7 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 	display: flex;
 	align-items: end;
+	max-width: 11rem;
   
   @media (max-width: 800px) {
     padding: 1rem;
