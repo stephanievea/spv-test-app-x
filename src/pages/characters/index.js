@@ -1,4 +1,6 @@
 import styled from "styled-components"
+import Link from 'next/link'
+import { BiLeftArrow } from "react-icons/bi";
 
 const Wrap = styled.div`
   margin: 2rem 0rem;
@@ -54,7 +56,6 @@ const Overlay = styled.div`
 const CharacterContainer = styled.div`
   color: #000;
   font-size: 1rem;
-  font-family: courier, choplin, 'Andale Mono';
   border-radius: 1rem;
   font-weight: 600;
   display: flex;
@@ -96,19 +97,33 @@ const CharacterDetailBox = styled.div`
 `
 
 const NameBox = styled.div`
-    padding: .5rem;
-    white-space: nowrap; 
-    color: white;
-    font-size: 1.3rem;
-    background-color: #008CBA;
+	padding: .5rem;
+	white-space: nowrap; 
+	color: white;
+	font-size: 1.3rem;
+	background-color: #008CBA;
 `
+
+const StyledLink = styled(Link)`
+	font-size: 1.5rem;
+	padding: 0rem 1rem;
+	letter-spacing: .1rem;
+  text-align: center;
+  color: #FFF;
+  text-decoration: none;
+	display: flex;
+	align-items: end;
+  
+  @media (max-width: 800px) {
+    padding: 1rem;
+  }
+`;
 
 
 function CharactersPage({characters}) {
-  console.log(characters, "props")
-
   return <>
     <Wrap>
+        <StyledLink href="/"><BiLeftArrow/>&nbsp;Home</StyledLink>
         <Container>
         {characters.map((char, index) => 
         <CharacterBox key={index}>

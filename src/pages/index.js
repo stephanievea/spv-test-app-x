@@ -15,15 +15,7 @@ const StyledLink = styled(Link)`
   font-size: 3rem;
   text-align: center;
   color: #FFF;
-  text-decoration: none;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  
+
   @media (max-width: 800px) {
     font-size: 2rem;
   }
