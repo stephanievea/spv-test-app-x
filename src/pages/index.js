@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import styled from "styled-components"
+
 const LinkContainer = styled.div`
   position: absolute;
   bottom: 22%;
